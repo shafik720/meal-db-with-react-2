@@ -6,8 +6,12 @@ import './Body.css'
 const Body = () => {
     return (
         <div className="body-div">
-            <Meal></Meal>
-            <Cart></Cart>
+            <div className="left-side">
+                <Meal></Meal>
+            </div>
+            <div className="right-side">
+                <Cart></Cart>
+            </div>           
         </div>
     );
 };
