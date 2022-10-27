@@ -36,7 +36,7 @@ const Body = () => {
             }          
             setFood(freschCart);
         }
-    },[meals, cart])
+    },[meals, cart])    
     
 
     return (
@@ -55,6 +55,7 @@ const Body = () => {
                     food.map(index=><Cart
                         index = {index}
                         key = {index.idMeal}
+                        addToBucket ={addToBucket}
                     ></Cart>)
                 }
             </div>           

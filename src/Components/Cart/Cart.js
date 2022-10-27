@@ -17,8 +17,8 @@ const Cart = (props) => {
                 </div>
             </div>
             <div className="card-right">
-                <span draggable><FontAwesomeIcon icon={faPlus} /></span>
-                <span draggable><FontAwesomeIcon icon={faMinus} /></span>
+                <span onClick={()=>props.addToBucket(props.index)} draggable><FontAwesomeIcon icon={faPlus} /></span>
+                <span  draggable><FontAwesomeIcon icon={faMinus} /></span>
             </div>
         </div>
     );
