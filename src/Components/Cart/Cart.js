@@ -1,5 +1,7 @@
 import React from 'react';
-import './Cart.css'
+import './Cart.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';   
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = (props) => {
     const {idMeal, strMeal, strMealThumb, quantity} = props.index;
@@ -11,10 +13,13 @@ const Cart = (props) => {
                 </div>
                 <div className="card-left-details">
                     <h3>Name : {strMeal} </h3>
-                    <p>Quantity : {quantity} </p>
+                    <p>Quantity : <span className="quantity">{quantity}</span> </p>
                 </div>
             </div>
-            <div className="card-right"></div>
+            <div className="card-right">
+                <span draggable><FontAwesomeIcon icon={faPlus} /></span>
+                <span draggable><FontAwesomeIcon icon={faMinus} /></span>
+            </div>
         </div>
     );
 };

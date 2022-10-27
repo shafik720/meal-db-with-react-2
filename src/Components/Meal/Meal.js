@@ -1,5 +1,6 @@
 import React from 'react';
-import './Meal.css'
+import './Meal.css';
+
 
 const Meal = (props) => {
     // console.log(props.index);

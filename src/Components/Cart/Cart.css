@@ -4,7 +4,12 @@
     border: 2px solid darkblue;
     border-radius: 5px;
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 0 5px;
 }
+
 .card-left-img img{
     width: 60px;
     margin-right: 10px;
@@ -17,4 +22,30 @@
 }
 .card-left-details h3{
     margin: 0;
+    font-size: 16px;   
+    padding-bottom: 7px; 
+}
+
+.quantity{
+    color: blue;
+    font-weight: 700;
+}
+.card-left-details p{
+    margin: 0;
+}
+
+.card-right span{
+    display: block;
+    cursor: pointer;    
+}
+.card-right span:first-child{
+    margin-bottom: 10px;
+}
+.card-right span:hover{
+    color: blue;
+}
+
+.card-left-details{
+    margin: 0;
+    padding: 0;
 }
