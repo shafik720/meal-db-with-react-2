@@ -6,9 +6,8 @@ import { faUtensilSpoon } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
     return (
         <div className="header-div">
-            <div className="left-side">
-            <FontAwesomeIcon icon={faUtensilSpoon} />
-            <h2>Food Era</h2>
+            <div className="left-side">            
+            <h1> <span><FontAwesomeIcon icon={faUtensilSpoon} /></span> Food Era</h1>
             </div>
             <div className="right-side">
                 <a href="">Home</a>
