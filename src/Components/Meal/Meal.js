@@ -6,7 +6,9 @@ const Meal = (props) => {
     const {idMeal, strArea, strCategory, strMeal, strMealThumb} = props.index;
     return (
         <div>
-            <h2>Food side</h2>
+            <div className="card-img">
+                <img src={strMealThumb} alt=""/>
+            </div>
         </div>
     );
 };
