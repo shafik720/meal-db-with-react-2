@@ -18,7 +18,7 @@ const Cart = (props) => {
             </div>
             <div className="card-right">
                 <span onClick={()=>props.addToBucket(props.index)} draggable><FontAwesomeIcon icon={faPlus} /></span>
-                <span  draggable><FontAwesomeIcon icon={faMinus} /></span>
+                <span onClick={()=>props.decrease(props.index)} draggable><FontAwesomeIcon icon={faMinus} /></span>
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToStorage , getStoredCart } from '../../utilities/storage';
+import { addToStorage , getStoredCart, decreaseDb } from '../../utilities/storage';
 import Cart from '../Cart/Cart';
 import Meal from '../Meal/Meal';
 import './Body.css'
@@ -23,6 +23,15 @@ const Body = () => {
         setCart(newCart);
     }
 
+    //decreasing from cart
+    const [foods, setFoods] = useState([]);
+    function decrease(element){
+        let newCart = [];
+        decreaseDb(element.idMeal);
+        newCart.push(element);
+        
+    }
+
     //----------------------------------- getting from local storage
     let [food, setFood] = useState([]);
     useEffect(()=>{
@@ -36,7 +45,9 @@ const Body = () => {
             }          
             setFood(freschCart);
         }
-    },[meals, cart])    
+    },[meals, cart])   
+    
+    
     
 
     return (
@@ -56,6 +67,7 @@ const Body = () => {
                         index = {index}
                         key = {index.idMeal}
                         addToBucket ={addToBucket}
+                        decrease = {decrease}
                     ></Cart>)
                 }
             </div>           

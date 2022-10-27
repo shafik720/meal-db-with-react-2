@@ -19,6 +19,14 @@ function getStoredCart(){
     return mealCart;
 }
 
+function decreaseDb(id){
+    let mealCart = JSON.parse(localStorage.getItem('meal-cart') || '{}');
+    let quantity = mealCart[id];
+    if(quantity>0){
+        mealCart[id] -= 1 ;
+    }
+    localStorage.setItem('meal-cart', JSON.stringify(mealCart));
+}
 
 
 
@@ -26,5 +34,6 @@ function getStoredCart(){
 
 export{
     addToStorage,
+    decreaseDb,
     getStoredCart
 }
