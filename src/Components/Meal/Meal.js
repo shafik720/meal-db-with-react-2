@@ -3,6 +3,7 @@ import './Meal.css'
 
 const Meal = (props) => {
     console.log(props.index);
+    const {idMeal, strArea, strCategory, strMeal, strMealThumb} = props.index;
     return (
         <div>
             <h2>Food side</h2>
