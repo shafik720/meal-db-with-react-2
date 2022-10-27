@@ -22,9 +22,14 @@ function getStoredCart(){
 function decreaseDb(id){
     let mealCart = JSON.parse(localStorage.getItem('meal-cart') || '{}');
     let quantity = mealCart[id];
-    if(quantity>0){
+    if(mealCart[id]===1){
+        let prop = id;
+        delete mealCart[prop];
+    }
+    else if(mealCart[id]>0){
         mealCart[id] -= 1 ;
     }
+    
     localStorage.setItem('meal-cart', JSON.stringify(mealCart));
 }
 

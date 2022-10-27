@@ -24,12 +24,12 @@ const Body = () => {
     }
 
     //decreasing from cart
-    const [foods, setFoods] = useState([]);
+    // const [foods, setFoods] = useState([]);
     function decrease(element){
         let newCart = [];
         decreaseDb(element.idMeal);
         newCart.push(element);
-        
+        setCart(newCart);
     }
 
     //----------------------------------- getting from local storage
