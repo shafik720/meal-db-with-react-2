@@ -15,7 +15,10 @@ const Body = () => {
         <div className="body-div">
             <div className="left-side">
                 {
-                    meals.map(index=><Meal></Meal>)
+                    meals.map(index=><Meal
+                        index={index}
+                        key = {index.idMeal}
+                    ></Meal>)
                 }
             </div>
             <div className="right-side">
