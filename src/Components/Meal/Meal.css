@@ -30,4 +30,9 @@
     font-size: 14px;
     border: 1px solid grey;
     cursor: pointer;
+    transition: all 0.1s;
+}
+.body-left button:hover{
+    background-color: white;
+    color: darkblue;
 }
