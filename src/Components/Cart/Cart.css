@@ -1,4 +1,10 @@
 
+
+.cardx{
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    margin: 10px 0;
+}
 .card-left-img img{
     width: 60px;
     margin-right: 10px;
