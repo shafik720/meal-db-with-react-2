@@ -36,3 +36,14 @@
     background-color: white;
     color: darkblue;
 }
+
+.body-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    align-items: flex-end;
+    padding-right: 5px;
+}
+.body-right p{
+    font-weight: 600;
+}
