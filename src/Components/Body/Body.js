@@ -17,7 +17,10 @@ const Body = () => {
     //----------------------------------- adding to local Storage
     let [cart, setCart] = useState([]);
     function addToBucket(element){
+        let newCart = [];
         addToStorage(element.idMeal);
+        newCart.push(element);
+        setCart(newCart);
     }
 
     //----------------------------------- getting from local storage
@@ -34,7 +37,7 @@ const Body = () => {
             setFood(freschCart);
             console.log(food)
         }
-    },[meals])
+    },[meals, cart])
     
 
     return (
