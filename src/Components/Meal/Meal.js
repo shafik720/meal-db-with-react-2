@@ -2,7 +2,7 @@ import React from 'react';
 import './Meal.css'
 
 const Meal = (props) => {
-    console.log(props.index);
+    // console.log(props.index);
     const {idMeal, strArea, strCategory, strMeal, strMealThumb} = props.index;
     return (
         <div className="food-card">
@@ -12,7 +12,7 @@ const Meal = (props) => {
             <div className="card-body">
                 <div className="body-left">
                     <h3>{strMeal}</h3>
-                    <button>Order</button>
+                    <button onClick={()=>props.addToBucket(props.index)} >Order</button>
                 </div>
                 <div className="body-right">
                     <p>{strCategory}</p>
