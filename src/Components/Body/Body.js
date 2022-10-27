@@ -35,7 +35,6 @@ const Body = () => {
                 freschCart.push(addedFood);
             }          
             setFood(freschCart);
-            console.log(food)
         }
     },[meals, cart])
     
@@ -52,7 +51,12 @@ const Body = () => {
                 }
             </div>
             <div className="right-side">
-                <Cart></Cart>
+                {
+                    food.map(index=><Cart
+                        index = {index}
+                        key = {index.idMeal}
+                    ></Cart>)
+                }
             </div>           
         </div>
     );

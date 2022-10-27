@@ -1,0 +1,14 @@
+
+.card-left-img img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.card-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-left-details h3{
+    margin: 0;
+}
